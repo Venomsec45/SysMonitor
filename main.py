@@ -4,8 +4,7 @@ from rich import print as show
 from rich.live import Live
 from rich.layout import Layout
 from rich.panel import Panel
-
-
+from readchar import readkey
 
 from colors import custom_colors
 from cpu.cpu_monitor import monitor
@@ -14,7 +13,6 @@ from disk.disk_status import disk
 from system_information.information import sys_information
 from network.network import network
 from process.system_processes import processes
-
 
 def main():
     border_custom_color = "rgb(10,217,240)"
