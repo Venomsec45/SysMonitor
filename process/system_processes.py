@@ -7,6 +7,8 @@ def processes():
     table = Table(expand=True)
     table.add_column("PID")
     table.add_column("Process")
+    table.add_column("Date started")
+    table.add_column("Status")
     table.add_column("Usage")
 
     processes = [
