@@ -4,8 +4,6 @@ from rich import print as show
 from rich.live import Live
 from rich.layout import Layout
 from rich.panel import Panel
-from readchar import readkey
-
 from colors import custom_colors
 from cpu.cpu_monitor import monitor
 from memory.memory_monitor import memory_monitor
