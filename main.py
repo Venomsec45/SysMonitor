@@ -57,7 +57,7 @@ with Live(main()) as live_monitor:
         try:
             live_monitor.update(main())
 
-        except psutil.NoSuchProcess:
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
             pass
     
         except KeyboardInterrupt:
