@@ -8,12 +8,14 @@ def processes():
     table.add_column("PID")
     table.add_column("Process")
     table.add_column("Status")
+    table.add_column("Username")
     table.add_column("CPU Usage")
     table.add_column("Memory Usage")
+    table.add_column("Threads")
 
     processes = [
         process.info
-        for process in psutil.process_iter(["pid", "name", "status", "cpu_percent", "memory_percent"])
+        for process in psutil.process_iter(["pid", "name", "status", "username", "cpu_percent", "memory_percent", "threads"])
     ]
 
     top_processes = sorted(
@@ -24,12 +26,12 @@ def processes():
 
     for process in top_processes:
         if process["cpu_percent"] >= 80 or process["memory_percent"] >= 80:
-            table.add_row(str(process["pid"]), str(process["name"]), str(process["status"]), Text(f"{process["cpu_percent"]}%", style=custom_colors()[2]), Text(f"{process["memory_percent"]}%", style=custom_colors()[2]))
+            table.add_row(str(process["pid"]), str(process["name"]), str(process["status"]), str(process["username"]), Text(f"{process["cpu_percent"]}%", style=custom_colors()[2]), Text(f"{process["memory_percent"]}%", style=custom_colors()[2]), str(process["threads"]))
         
         elif process["cpu_percent"] >= 48 or process["memory_percent"] >= 48:
-            table.add_row(str(process["pid"]), str(process["name"]), str(process["status"]), Text(f"{process["cpu_percent"]}%", style=custom_colors()[1]), Text(f"{process["memory_percent"]}%", style=custom_colors()[1]))
+            table.add_row(str(process["pid"]), str(process["name"]), str(process["status"]), str(process["username"]), Text(f"{process["cpu_percent"]}%", style=custom_colors()[1]), Text(f"{process["memory_percent"]}%", style=custom_colors()[1]), str(process["threads"]))
 
         else:
-            table.add_row(str(process["pid"]), str(process["name"]), str(process["status"]), Text(f"{process["cpu_percent"]}%", style=custom_colors()[0]), Text(f"{process["memory_percent"]}%", style=custom_colors()[0]))        
+            table.add_row(str(process["pid"]), str(process["name"]), str(process["status"]), str(process["username"]), Text(f"{process["cpu_percent"]}%", style=custom_colors()[0]), Text(f"{process["memory_percent"]}%", style=custom_colors()[0]), str(process["threads"]))        
 
     return table
