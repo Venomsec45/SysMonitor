@@ -1,4 +1,5 @@
 import psutil
+from rich.table import Table
 
 def network_input_output():
     return [
