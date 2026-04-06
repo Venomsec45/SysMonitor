@@ -6,12 +6,12 @@ from colors import custom_colors
 def processes():
     table = Table(expand=True)
     table.add_column("PID")
-    table.add_column("Process")
-    table.add_column("Username")
-    table.add_column("Status")
-    table.add_column("CPU Usage")
-    table.add_column("Memory Usage")
-    table.add_column("Threads")
+    table.add_column("PROCESS")
+    table.add_column("USERNAME")
+    table.add_column("STATUS")
+    table.add_column("CPU USAGE")
+    table.add_column("MEMORY USAGE")
+    table.add_column("THREADS")
 
     processes = [
         process.info
