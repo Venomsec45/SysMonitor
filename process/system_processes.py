@@ -4,7 +4,7 @@ from rich.text import Text
 from colors import custom_colors
 
 def processes():
-    table = Table(expand=True)
+    table = Table(expand=True, box=None)
     table.add_column("PID")
     table.add_column("PROCESS")
     table.add_column("USERNAME")
