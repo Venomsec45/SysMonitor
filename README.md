@@ -1,4 +1,4 @@
-(!)[https://img.shields.io/badge/Python-1343F2]
+![Python](https://img.shields.io/badge/Python-1343F2)
 
 # SysMonitor
 SysMonitor is an open source code written in Python that monitors the system in any OS of your computer. It monitors memory, cpu usage, processes, disk usage, and network traffic. The code will show the information about the hostname, architecture, machine and the version of your computer.
