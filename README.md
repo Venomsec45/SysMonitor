@@ -1,4 +1,4 @@
-[!](https://img.shields.io/badge/Python-1343F2)
+(!)[https://img.shields.io/badge/Python-1343F2]
 
 # SysMonitor
 SysMonitor is an open source code written in Python that monitors the system in any OS of your computer. It monitors memory, cpu usage, processes, disk usage, and network traffic. The code will show the information about the hostname, architecture, machine and the version of your computer.
@@ -16,7 +16,7 @@ SysMonitor is an open source code written in Python that monitors the system in 
 ## Installation
 1. Type the following command below to get the source code.
 ```
-git clone
+git clone https://github.com/Venomsec45/SysMonitor.git
 ```
 
 2. Go to the code's directory
